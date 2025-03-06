@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightWorld</title>
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Add jsPDF CDN link inside the <head> tag of your HTML file -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="logo fa-solid fa-lightbulb"></i>BRIGHT WORLD!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Catagories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="bulb.html">Bulbs</a></li>
+                <li><a class="dropdown-item" href="spotlight.html">Spot LED Lights</a></li>
+                <li><a class="dropdown-item" href="light.html">LED Lights</a></li>
+                <li><a class="dropdown-item" href="decorlight.html">Decoration Lights</a></li>
+                <li><a class="dropdown-item" href="smartlight.html">Smart Lights</a></li>
+                <!-- <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown- active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catagories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="bulb.html"></a>Bulbs</li>
+                <li><a class="dropdown-item" href="light.html"></a>LED lights</li>
+                <li><a class="dropdown-item" href="decorlight.html"></a> Decoration lights</li>
+                <li><a class="dropdown-item" href="smart.html"></a>smart lights</li>
+               
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" href="Queries.html">Queries links</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sitemap
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                <!-- <li><a class="dropdown-item" href="bulb.html">Catagories</a></li> -->
+                <li><a class="dropdown-item" href="Queries.html">Queries</a></li>
+                <li><a class="dropdown-item" href="about.html">About us</a></li>
+                <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                <li><a class="dropdown-item" href="feedback.html">feedback</a></li>
+                
+
+                
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" href="feedback.html">feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </li>
+          </ul>
+          <!-- Cart Section in Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="fa fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <img src="images/about.jpg" alt="">
+    </div>
+    <h1 class="text-center text-black">ABOUT US</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/decorimg13.avif" alt="Image 1">
+        <div class="content">
+          <h3>CHANDELIER</h3>
+          <p>This is a description for the first image.</p>
+          <p class="card-text">900.00 ₨ – 1,700.00 ₨</p>
+           <button>Add to cart</button>
+                   <div class="download-buttons"> 
+                     <button onclick="downloadPDF()">Download as PDF</button>
+                 </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="images/decorimg14.webp" alt="Image 2">
+        <div class="content">
+          <h3>CHANDELIER</h3>
+          <p>This is a description for the second image.</p>
+          <p class="card-text">900.00 ₨ – 1,700.00 ₨</p>
+           <button>Add to cart</button>
+                   <div class="download-buttons"> 
+                     <button onclick="downloadPDF()">Download as PDF</button>
+                 </div>
+        </div>
+      </div>
+     
+      <div class="card">
+        <img src="images/decorimg17.avif" alt="Image 3">
+        <div class="content">
+          <h3>CHANDELIER</h3>
+          <p>This is a description for the third image.</p>
+          <p class="card-text">900.00 ₨ – 1,700.00 ₨</p>
+           <button>Add to cart</button>
+                   <div class="download-buttons"> 
+                     <button onclick="downloadPDF()">Download as PDF</button>
+                 </div>
+        </div>
+     </div>
+     </div>
+     <h1 class="text-center">LIGHTS AND LAMPS</h1>
+     <p class="text-center"> <b>Elevate your home’s elegance with exquisite collection of crystal chandeliers in Pakistan.  <br>
+      Discover a variety of stunning modern crystal chandeliers, LED chandeliers, and luxury chandeliers <br> 
+      designed to add a touch of sophistication to any space. Perfect for living rooms and bedrooms, our <br>
+      chandeliers blend style with functionality, offering brilliant illumination and breathtaking beauty. <br>
+       Whether you prefer contemporary designs or classic luxury, our curated selection ensures the perfect <br>
+        chandelier to complement your décor. Shop now to transform your home with our premium crystal chandeliers. </b></p>
+    
+   
+
+    
+    
+     <footer class=" text-black py-4 mt-5">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-4">
+         
+              <!-- Logo & About -->
+           <div class="w-full md:w-1/3 mb-4 md:mb-0">
+            <h2 class="text-xl font-bold"><i class="logo fa-solid fa-lightbulb"></i>BRIGHT WORLD!</h2>
+            <p class="text-sm text-gray-400 mt-2">Building the future, one step at a time.</p>
+            <h5>About Us</h5>
+            <p>We are a company dedicated to providing excellent services to our clients.</p>
+          </div> 
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-dark">Home</a></li>
+              <li><a href="about.html" class="text-dark">About</a></li>
+              <li><a href="services.html" class="text-dark">Services</a></li>
+              <li><a href="contact.html" class="text-dark">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>Email: contact@mywebsite.com</p>
+          <p>Phone: +1 234 567 890</p>
+             <!-- Social Media -->
+             <div class="w-full md:w-1/3">
+              <h3 class="text-lg font-semibold">Follow Us</h3>
+              <div class="flex space-x-4 mt-2">
+                <a href="#" class="text-gray-400 hover:text-white">Facebook <i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white">Twitter <i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white">Instagram <i class="fa-brands fa-square-instagram"></i></a>
+              </div>
+             
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border-gray-700 my-4">
+    <div class="text-center mt-3">
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+    </div>
+   
+           
+  </div>
+</div>
+</footer> 
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/popper.min.js"></script>
+</body>
+</html>
